@@ -6,22 +6,31 @@ pygame.init()
 FPS = 30
 screen = pygame.display.set_mode((600, 600))
 
-screen.fill('grey') #Заливка
+#фон
+screen.fill('grey')
 
-circle(screen, 'yellow', (300, 300), 100) #Голова
-circle(screen, 0, (300, 300), 100, 1) #Голова_обводка
-
-circle(screen, 'red', (260, 270), 20) #Левый глаз
-circle(screen, 0, (260, 270), 20, 1) #Левый глаз_обводка
-circle(screen, 0, (260, 270), 9) #Левый глаз_зрачок
-line(screen, 0, (200, 210), (275, 250), 10) #Левый глаз_бровь
-
-circle(screen, 'red', (345, 270), 15) #Правый глаз
-circle(screen, 0, (345, 270), 15, 1) #Правый глаз_обводка
-circle(screen, 0, (345, 270), 8) #Правый глаз_зрачок
-line(screen, 0, (330, 260), (400, 225), 10) #Правый глаз_бровь
-
-rect(screen, 0, (240, 340, 100, 20)) #Рот
+#голова
+circle(screen, 'yellow', (300, 300), 100)
+#голова_контур
+circle(screen, 0, (300, 300), 100, 1)
+#глаз_левый
+circle(screen, 'red', (260, 270), 20)
+#глаз_левый_контур
+circle(screen, 0, (260, 270), 20, 1)
+#глаз_левый_зрач
+circle(screen, 0, (260, 270), 9)
+#глаз_левый_бровь
+line(screen, 0, (200, 210), (275, 250), 10)
+#глаз_правый
+circle(screen, 'red', (345, 270), 15)
+#глаз_правый_контур
+circle(screen, 0, (345, 270), 15, 1)
+#глаз_правый_зрач
+circle(screen, 0, (345, 270), 8)
+#глаз_правый_бровь
+line(screen, 0, (330, 260), (400, 225), 10)
+#рот
+rect(screen, 0, (240, 340, 100, 20))
 
 pygame.display.update()
 clock = pygame.time.Clock()
